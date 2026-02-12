@@ -1,0 +1,31 @@
+# Build folders
+Debug/
+Release/
+build/
+
+# STM32CubeIDE
+.settings/
+.metadata/
+.idea/
+
+# Keil
+*.uvoptx
+*.uvprojx
+*.bak
+*.axf
+*.hex
+*.o
+*.d
+
+# IAR
+*.ewp
+*.eww
+*.ewd
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+
+# OS
+.DS_Store
+Thumbs.db

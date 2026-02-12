@@ -1,0 +1,19 @@
+target extended-remote localhost:3333
+set pagination off
+
+define monitor_imu
+  while 1
+    monitor halt
+    printf "Roll: "
+    call MahonyFilter.getRoll()
+    printf " | Pitch: "
+    call MahonyFilter.getPitch()
+    printf " | Yaw: "
+    call MahonyFilter.getYaw()
+    printf "\n"
+    monitor resume
+    shell sleep 0.2
+  end
+end
+
+monitor_imu
